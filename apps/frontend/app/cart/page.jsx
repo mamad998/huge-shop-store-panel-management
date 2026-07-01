@@ -75,7 +75,7 @@ export default function Cart(){
                                 {
                                     cart.map(
                                         (product)=>(
-                                            <tr key={product._id}>
+                                            <tr key={product._id} className="overflow-y-auto">
                                                 <td className="cart-product">
 
                                                     <Image src={product.image} width={80} height={80}
