@@ -3,7 +3,7 @@ import DetailClientSide from "./detailClientSide";
 export default async function ProductDetail({params}){
 
 const {id} = await params;
-const response = await fetch(`http://localhost:3000/api/products/${id}`);
+const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`);
 const mainProduct = await response.json();
 
 
