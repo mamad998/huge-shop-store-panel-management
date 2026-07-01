@@ -2,7 +2,7 @@ import mongoose from "mongoose";
 
 const uri = process.env.MONGODB_URI;
 
-if (uri === "production" && !uri) {
+if (!uri) {
   throw new Error("تنظیمات دیتا بیس را وارد کنید.");
 }
 
