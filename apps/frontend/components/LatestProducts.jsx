@@ -14,8 +14,8 @@ export default async function LatestProducts({searchParams}){
     const category = params?.category;
 
     const url = category ?
-    `http://localhost:3000/api/products?category=${category}`:
-    "http://localhost:3000/api/products"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/products?category=${category}`:
+    `${process.env.NEXT_PUBLIC_API_URL}/api/products`
 
     const response = await fetch(url , {cache: "no-store"});
     const products = await response.json();
