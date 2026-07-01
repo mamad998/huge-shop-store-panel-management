@@ -2,7 +2,7 @@ import { enTofa, enTofaNum } from "../../utils/Utilities";
 
 export default async function Order(){
     
-    const response = await fetch("http://localhost:3001/api/orders");
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`);
     const orders = await response.json();
 
     return(
