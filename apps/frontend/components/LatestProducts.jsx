@@ -15,7 +15,7 @@ export default async function LatestProducts({searchParams}){
 
     const url = category ?
     `${process.env.NEXT_PUBLIC_API_URL}/api/products?category=${category}`:
-    "${process.env.NEXT_PUBLIC_API_URL}/api/products"
+    `${process.env.NEXT_PUBLIC_API_URL}/api/products`
 
     const response = await fetch(url , {cache: "no-store"});
     const products = await response.json();
