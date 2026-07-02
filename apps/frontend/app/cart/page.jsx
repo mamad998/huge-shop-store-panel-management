@@ -33,7 +33,7 @@ export default function Cart(){
             totalPrice : getTotal(),
         }
         try{
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders` , {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs.vercel.app" }/api/orders` , {
             method : "POST",
             headers : {"Content-Type" : "application/json"},
             body : JSON.stringify(orderData)
