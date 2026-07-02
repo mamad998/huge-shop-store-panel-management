@@ -1,3 +1,4 @@
+export const dynamic = 'force-dynamic';
 import { enTofa, enTofaNum } from "../../utils/Utilities";
 
 export default async function Order(){
