@@ -11,7 +11,7 @@ export default function EditProduct(){
     useEffect(
         ()=>{
             async function fetchProduct(){
-                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}`);
+                const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs-git-master-mohammadreza-138171-projects.vercel.app"}/api/products/${id}`);
                 const data = await response.json();
                 setFormData(data.product)
             }
