@@ -3,7 +3,7 @@ import Link from "next/link";
 import { FiEdit, FiTrash2 } from "react-icons/fi";
 
 export default async function Products(){
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs-git-master-mohammadreza-138171-projects.vercel.app"}/api/products`);
     const products = await response.json();
 
     return(
