@@ -22,7 +22,7 @@ import { useState } from "react"
 
         e.preventDefault();
 
-        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products` , {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs-git-master-mohammadreza-138171-projects.vercel.app"}/api/products` , {
             method : "POST",
             headers:{"Content-Type" : "application/json"},
             body : JSON.stringify(formData)
