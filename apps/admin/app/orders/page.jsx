@@ -3,7 +3,7 @@ import { enTofa, enTofaNum } from "../../utils/Utilities";
 
 export default async function Order(){
     
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/orders`);
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs-git-master-mohammadreza-138171-projects.vercel.app" }/api/orders`);
     const orders = await response.json();
 
     return(
