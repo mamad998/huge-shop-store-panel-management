@@ -9,7 +9,7 @@ import { NextResponse } from "next/server";
     const {id} = useParams();
 
    async function handleDelete(){
-    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/api/products/${id}` , {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL || "https://adminpanelhshs-git-master-mohammadreza-138171-projects.vercel.app"}/api/products/${id}` , {
         method : "DELETE",
         headers : {"Content-Type" : "application/json"}
     })
